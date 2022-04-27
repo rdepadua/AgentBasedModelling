@@ -20,7 +20,17 @@ class Agent:
         #     return "id=" + str(self.id) + ", x=" + str(self.x) + ", y=" + str(self.y) + ", storage=" + str(self.store) 
    
         #create method called move where agents randomly move         
-        def move(self):        
+        def move(self):  
+            """
+            Moves agent using random library. If random number is greater than 0.5 then 
+            it moves + 1 in x and y direction, if less than 0.5 agent move -1 in x and 
+            y direction
+
+            Returns
+            -------
+            Agent movement +/- 1
+
+            """               
             if random.random() < 0.5:
                 self.x = (self.x + 1) %300
             else: 
@@ -34,6 +44,15 @@ class Agent:
         #create method eat where agents eat the environment with conditions of minimum amount of the environment 
         #that could be eaten, how much is being eaten and how much is stored within the agents 
         def eat(self):
+            """
+            Calculate how much environment can be eaten and how much environment is taken 
+            away and how much is stored within the agents
+
+            Returns
+            -------
+            Reduction from environment
+            Adding storage within agents
+            """
             if self.environment[self.y][self.x] > 50:
                self.environment[self.y][self.x] -= 75
                self.store += 1
@@ -43,10 +62,10 @@ class Agent:
             # check storage of agents
             # print("id=" + str(self.id) + ", x=" + str(self.x) + ", y=" + str(self.y) + ", store=" + str(self.store))  
             
-            # Agent returning some of its store to the environment if it has more than 100
-            if self.store > 100:
-                self.environment[self.y][self.x] += 25
-                self.store = 75
+           # Agent returning some of its store to the environment if it has more than 100
+           # if self.store > 100:
+           #    self.environment[self.y][self.x] += 25
+           #     self.store = 75
                 
 
             
@@ -108,9 +127,9 @@ class Agent:
             ((self.y - agent.y)**2))**0.5
         
     
-        def birth(self):
-              if self.store >= 500:
-                 self.store -= 500
+        #def birth(self):
+              #if self.store >= 500:
+                 #self.store -= 500
                  
                  
         def get_store(self):
