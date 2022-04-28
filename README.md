@@ -11,10 +11,10 @@ Please see previous version in 'beforeWebScraping' folder for a working model
 
 The model has the following functions:
 
-Agents move
-Agents eat the environment
-Agents return share to environment
-Agents share storage between agents
+* Agents move
+* Agents eat the environment
+* Agents return share to environment
+* Agents share storage between agents
 
 ## Running model
 Run the code and click pop-up model for option to 'Run model' 
