@@ -19,4 +19,8 @@ Agents share storage between agents
 ## Running model
 Run the code and click pop-up model for option to 'Run model' 
 
-##
+## License
+
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
